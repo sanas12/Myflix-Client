@@ -27254,7 +27254,7 @@ const MainView = ()=>{
                 Bio: "Frank Darabont is a Hungarian-American film director, screenwriter, and producer who has been nominated for three Academy Awards and a Golden Globe.",
                 Birth: "January 28, 1959"
             },
-            ImagePath: "https://images-na.ssl-images-amazon.com/images/I/51WAikRq37L._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
+            ImagePath: "	https://m.media-amazon.com/images/I/91E-7Zj48BL._SY606_.jpg",
             Featured: false
         },
         {
@@ -27270,7 +27270,7 @@ const MainView = ()=>{
                 Bio: "Francis Ford Coppola is an American film director, producer, and screenwriter who was a central figure in the New Hollywood filmmaking movement of the 1960s and 1970s.",
                 Birth: "April 7, 1939"
             },
-            ImagePath: "godfather.jpg",
+            ImagePath: "	https://eportfolios.macaulay.cuny.edu/seminars/drabik09/images/4/4d/Godfather.jpg",
             Featured: false
         },
         {
@@ -27285,8 +27285,7 @@ const MainView = ()=>{
                 Bio: "Christopher Nolan is a British-American film director, producer, and screenwriter known for his distinctive style and innovative approach to filmmaking.",
                 Birth: "July 30, 1970"
             },
-            ImagePath: "inception.jpg",
-            Featured: true
+            ImagePath: "https://www.bambikino.de/wp-content/uploads/2024/01/Psyche-Inception-pl.jpg"
         },
         {
             id: 3,
@@ -27301,7 +27300,7 @@ const MainView = ()=>{
                 Bio: "Christopher Nolan is a British-American film director, producer, and screenwriter known for his distinctive style and innovative approach to filmmaking.",
                 Birth: "July 30, 1970"
             },
-            ImagePath: "dark_knight.jpg",
+            ImagePath: "	https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg",
             Featured: true
         },
         {
@@ -27317,7 +27316,7 @@ const MainView = ()=>{
                 Bio: "Robert Zemeckis is an American film director, producer, and screenwriter known for his work in various genres, including comedy, science fiction, and drama.",
                 Birth: "May 14, 1952"
             },
-            ImagePath: "forrest_gump.jpg",
+            ImagePath: "https://upload.wikimedia.org/wikipedia/vi/1/1d/Forrest_gump.jpg?20210321014741",
             Featured: false
         },
         {
@@ -27333,7 +27332,7 @@ const MainView = ()=>{
                 Bio: "Quentin Tarantino is an American film director, screenwriter, producer, and actor known for his nonlinear storylines, satirical subject matter, and aestheticization of violence.",
                 Birth: "March 27, 1963"
             },
-            ImagePath: "pulp_fiction.jpg",
+            ImagePath: "	https://cdn.europosters.eu/image/750/posters/pulp-fiction-cover-i1288.jpg",
             Featured: false
         }
     ]);
@@ -27343,14 +27342,14 @@ const MainView = ()=>{
         onBackClick: ()=>setSelectedMovie(null)
     }, void 0, false, {
         fileName: "src/components/main-view/main-view.jsx",
-        lineNumber: 121,
+        lineNumber: 124,
         columnNumber: 7
     }, undefined);
     if (movies.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: "The list is empty!"
     }, void 0, false, {
         fileName: "src/components/main-view/main-view.jsx",
-        lineNumber: 128,
+        lineNumber: 131,
         columnNumber: 12
     }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27361,16 +27360,16 @@ const MainView = ()=>{
                 }
             }, movie.id, false, {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 134,
+                lineNumber: 137,
                 columnNumber: 9
             }, undefined))
     }, void 0, false, {
         fileName: "src/components/main-view/main-view.jsx",
-        lineNumber: 132,
+        lineNumber: 135,
         columnNumber: 5
     }, undefined);
 };
-_s(MainView, "pR3/ufaxwEUbxJwP/vJL4DPh//s=");
+_s(MainView, "Gu5eD0OPsLX8e69SuBeqt+OJE70=");
 _c = MainView;
 var _c;
 $RefreshReg$(_c, "MainView");

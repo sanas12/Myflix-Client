@@ -19,8 +19,7 @@ export const MainView = () => {
         Bio: "Frank Darabont is a Hungarian-American film director, screenwriter, and producer who has been nominated for three Academy Awards and a Golden Globe.",
         Birth: "January 28, 1959",
       },
-      ImagePath:
-        "https://images-na.ssl-images-amazon.com/images/I/51WAikRq37L._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
+      ImagePath: "	https://m.media-amazon.com/images/I/91E-7Zj48BL._SY606_.jpg",
       Featured: false,
     },
     {
@@ -38,7 +37,8 @@ export const MainView = () => {
         Bio: "Francis Ford Coppola is an American film director, producer, and screenwriter who was a central figure in the New Hollywood filmmaking movement of the 1960s and 1970s.",
         Birth: "April 7, 1939",
       },
-      ImagePath: "godfather.jpg",
+      ImagePath:
+        "	https://eportfolios.macaulay.cuny.edu/seminars/drabik09/images/4/4d/Godfather.jpg",
       Featured: false,
     },
     {
@@ -55,8 +55,8 @@ export const MainView = () => {
         Bio: "Christopher Nolan is a British-American film director, producer, and screenwriter known for his distinctive style and innovative approach to filmmaking.",
         Birth: "July 30, 1970",
       },
-      ImagePath: "inception.jpg",
-      Featured: true,
+      ImagePath:
+        "https://www.bambikino.de/wp-content/uploads/2024/01/Psyche-Inception-pl.jpg",
     },
     {
       id: 3,
@@ -73,7 +73,8 @@ export const MainView = () => {
         Bio: "Christopher Nolan is a British-American film director, producer, and screenwriter known for his distinctive style and innovative approach to filmmaking.",
         Birth: "July 30, 1970",
       },
-      ImagePath: "dark_knight.jpg",
+      ImagePath:
+        "	https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg",
       Featured: true,
     },
     {
@@ -91,7 +92,8 @@ export const MainView = () => {
         Bio: "Robert Zemeckis is an American film director, producer, and screenwriter known for his work in various genres, including comedy, science fiction, and drama.",
         Birth: "May 14, 1952",
       },
-      ImagePath: "forrest_gump.jpg",
+      ImagePath:
+        "https://upload.wikimedia.org/wikipedia/vi/1/1d/Forrest_gump.jpg?20210321014741",
       Featured: false,
     },
     {
@@ -109,7 +111,8 @@ export const MainView = () => {
         Bio: "Quentin Tarantino is an American film director, screenwriter, producer, and actor known for his nonlinear storylines, satirical subject matter, and aestheticization of violence.",
         Birth: "March 27, 1963",
       },
-      ImagePath: "pulp_fiction.jpg",
+      ImagePath:
+        "	https://cdn.europosters.eu/image/750/posters/pulp-fiction-cover-i1288.jpg",
       Featured: false,
     },
   ]);
