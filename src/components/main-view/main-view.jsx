@@ -19,7 +19,7 @@ export const MainView = () => {
         Bio: "Frank Darabont is a Hungarian-American film director, screenwriter, and producer who has been nominated for three Academy Awards and a Golden Globe.",
         Birth: "January 28, 1959",
       },
-      ImagePath: "	https://m.media-amazon.com/images/I/91E-7Zj48BL._SY606_.jpg",
+      ImagePath: "https://m.media-amazon.com/images/I/91E-7Zj48BL._SY606_.jpg",
       Featured: false,
     },
     {
@@ -38,7 +38,7 @@ export const MainView = () => {
         Birth: "April 7, 1939",
       },
       ImagePath:
-        "	https://eportfolios.macaulay.cuny.edu/seminars/drabik09/images/4/4d/Godfather.jpg",
+        "https://eportfolios.macaulay.cuny.edu/seminars/drabik09/images/4/4d/Godfather.jpg",
       Featured: false,
     },
     {
@@ -74,7 +74,7 @@ export const MainView = () => {
         Birth: "July 30, 1970",
       },
       ImagePath:
-        "	https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg",
       Featured: true,
     },
     {
@@ -112,7 +112,7 @@ export const MainView = () => {
         Birth: "March 27, 1963",
       },
       ImagePath:
-        "	https://cdn.europosters.eu/image/750/posters/pulp-fiction-cover-i1288.jpg",
+        "https://cdn.europosters.eu/image/750/posters/pulp-fiction-cover-i1288.jpg",
       Featured: false,
     },
   ]);
