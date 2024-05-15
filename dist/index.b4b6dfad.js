@@ -27254,7 +27254,7 @@ const MainView = ()=>{
                 Bio: "Frank Darabont is a Hungarian-American film director, screenwriter, and producer who has been nominated for three Academy Awards and a Golden Globe.",
                 Birth: "January 28, 1959"
             },
-            ImagePath: "	https://m.media-amazon.com/images/I/91E-7Zj48BL._SY606_.jpg",
+            ImagePath: "https://m.media-amazon.com/images/I/91E-7Zj48BL._SY606_.jpg",
             Featured: false
         },
         {
@@ -27270,7 +27270,7 @@ const MainView = ()=>{
                 Bio: "Francis Ford Coppola is an American film director, producer, and screenwriter who was a central figure in the New Hollywood filmmaking movement of the 1960s and 1970s.",
                 Birth: "April 7, 1939"
             },
-            ImagePath: "	https://eportfolios.macaulay.cuny.edu/seminars/drabik09/images/4/4d/Godfather.jpg",
+            ImagePath: "https://eportfolios.macaulay.cuny.edu/seminars/drabik09/images/4/4d/Godfather.jpg",
             Featured: false
         },
         {
@@ -27300,7 +27300,7 @@ const MainView = ()=>{
                 Bio: "Christopher Nolan is a British-American film director, producer, and screenwriter known for his distinctive style and innovative approach to filmmaking.",
                 Birth: "July 30, 1970"
             },
-            ImagePath: "	https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg",
+            ImagePath: "https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg",
             Featured: true
         },
         {
@@ -27332,7 +27332,7 @@ const MainView = ()=>{
                 Bio: "Quentin Tarantino is an American film director, screenwriter, producer, and actor known for his nonlinear storylines, satirical subject matter, and aestheticization of violence.",
                 Birth: "March 27, 1963"
             },
-            ImagePath: "	https://cdn.europosters.eu/image/750/posters/pulp-fiction-cover-i1288.jpg",
+            ImagePath: "https://cdn.europosters.eu/image/750/posters/pulp-fiction-cover-i1288.jpg",
             Featured: false
         }
     ]);
@@ -27369,7 +27369,7 @@ const MainView = ()=>{
         columnNumber: 5
     }, undefined);
 };
-_s(MainView, "Gu5eD0OPsLX8e69SuBeqt+OJE70=");
+_s(MainView, "/idueDj9KuGVhAYKx44LAXZkBAM=");
 _c = MainView;
 var _c;
 $RefreshReg$(_c, "MainView");
