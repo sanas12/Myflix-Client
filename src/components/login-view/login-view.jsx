@@ -16,15 +16,15 @@ export const LoginView = ({ onLoggedIn }) => {
     fetch("https://myflix-app-s99e.onrender.com/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
+
       body: JSON.stringify(data),
     })
       .then((response) => response.json())
       .then((response) => {
-        if (response) {
+        if (response.user) {
           localStorage.setItem("user", JSON.stringify(response.user));
           localStorage.setItem("token", response.token);
           onLoggedIn(response.user, response.token);
-          onLoggedIn(username);
         } else {
           alert("Login failed");
         }
@@ -39,6 +39,7 @@ export const LoginView = ({ onLoggedIn }) => {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
+          minLength="4"
         />
       </label>
       <label>

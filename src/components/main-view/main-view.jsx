@@ -5,12 +5,10 @@ import { LoginView } from "../login-view/login-view";
 import { SignupView } from "../signup-view/signup-view";
 
 export const MainView = () => {
-  const storedUser = JSON.parse(localStorage.getItem("user"));
-  const storedToken = localStorage.getItem("token");
-  const [user, setUser] = useState(null);
-  const [token, setToken] = useState(null);
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(null);
+  const [user, setUser] = useState(null);
+  const [token, setToken] = useState(null);
 
   useEffect(() => {
     if (!token) return;
@@ -18,20 +16,32 @@ export const MainView = () => {
     fetch("https://myflix-app-s99e.onrender.com/movies", {
       headers: { Authorization: `Bearer ${token}` },
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to fetch movies");
+        }
+        return response.json();
+      })
       .then((movies) => {
         setMovies(movies);
+      })
+      .catch((error) => {
+        console.error("Error fetching movies:", error);
       });
   }, [token]);
 
   if (!user) {
     return (
-      <LoginView
-        onLoggedIn={(user, token) => {
-          setUser(user);
-          setToken(token);
-        }}
-      />
+      <>
+        <LoginView
+          onLoggedIn={(user, token) => {
+            setUser(user);
+            setToken(token);
+          }}
+        />
+        or
+        <SignupView />
+      </>
     );
   }
 
@@ -43,39 +53,13 @@ export const MainView = () => {
       />
     );
   }
-  if (movies.length === 0) {
-    return;
 
-    <div>The list is empty!</div>;
+  if (movies.length === 0) {
+    return <div>The list is empty!</div>;
   }
 
   return (
     <div>
-      <button
-        onClick={() => {
-          setUser(null);
-          setToken(null);
-          localStorage.clear();
-        }}
-      >
-        Logout
-      </button>
-
-      <>
-        <LoginView
-          onLoggedIn={(user, token) => {
-            console.log(user);
-            localStorage.setItem("user", user);
-            setUser(user);
-            //setToken(token);
-          }}
-        />
-      </>
-
-      <>
-        <SignupView />
-      </>
-
       {movies.map((movie) => (
         <MovieCard
           key={movie.id}
@@ -85,6 +69,16 @@ export const MainView = () => {
           }}
         />
       ))}
+      {
+        <button
+          onClick={() => {
+            setUser(null);
+            localStorage.clear();
+          }}
+        >
+          Logout
+        </button>
+      }
     </div>
   );
 };
