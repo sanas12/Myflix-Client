@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"43g3P":[function(require,module,exports) {
+})({"guGFH":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -583,9 +583,9 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"fRKvV":[function(require,module,exports) {
-var Refresh = require("1981637e18e0a2db");
-var ErrorOverlay = require("c4c0ceaa7ef3daa9");
+},{}],"6Z55X":[function(require,module,exports) {
+var Refresh = require("4cf0124702d59294");
+var ErrorOverlay = require("6e60d6febeb55a54");
 Refresh.injectIntoGlobalHook(window);
 window.$RefreshReg$ = function() {};
 window.$RefreshSig$ = function() {
@@ -604,11 +604,11 @@ window.addEventListener("parcelhmraccept", ()=>{
     ErrorOverlay.dismissRuntimeErrors();
 });
 
-},{"1981637e18e0a2db":"jFqIb","c4c0ceaa7ef3daa9":"1O0Sq"}],"jFqIb":[function(require,module,exports) {
+},{"4cf0124702d59294":"1KhDs","6e60d6febeb55a54":"iiDU4"}],"1KhDs":[function(require,module,exports) {
 "use strict";
-module.exports = require("de55fe56b27234ab");
+module.exports = require("9fc757dc32f64413");
 
-},{"de55fe56b27234ab":"kritE"}],"kritE":[function(require,module,exports) {
+},{"9fc757dc32f64413":"f7Bth"}],"f7Bth":[function(require,module,exports) {
 /** @license React v0.9.0
  * react-refresh-runtime.development.js
  *
@@ -1068,8 +1068,8 @@ module.exports = require("de55fe56b27234ab");
     exports.setSignature = setSignature;
 })();
 
-},{}],"1O0Sq":[function(require,module,exports) {
-var process = require("d3c2c14e3b22f9cb");
+},{}],"iiDU4":[function(require,module,exports) {
+var process = require("e2c8cd235123f719");
 !function(e, t) {
     module.exports = t();
 }(window, function() {
@@ -2799,7 +2799,7 @@ var process = require("d3c2c14e3b22f9cb");
     ]);
 });
 
-},{"d3c2c14e3b22f9cb":"kLDIy"}],"kLDIy":[function(require,module,exports) {
+},{"e2c8cd235123f719":"d5jf4"}],"d5jf4":[function(require,module,exports) {
 // shim for using process in browser
 var process = module.exports = {};
 // cached from whatever global is present so that test runners that stub it
@@ -2985,7 +2985,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./components/main-view/main-view":"4gflv","./index.scss":"lJZlQ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3d8ro","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"ZTXIF"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./components/main-view/main-view":"4gflv","./index.scss":"lJZlQ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"lxdJM","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"5lR7G"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27385,7 +27385,7 @@ $RefreshReg$(_c, "MainView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../movie-card/movie-card":"bwuIu","../movie-view/movie-view":"ggaUx","@parcel/transformer-js/src/esmodule-helpers.js":"ZTXIF","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3d8ro"}],"bwuIu":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../movie-card/movie-card":"bwuIu","../movie-view/movie-view":"ggaUx","@parcel/transformer-js/src/esmodule-helpers.js":"5lR7G","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"lxdJM"}],"bwuIu":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$67b2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27440,7 +27440,7 @@ $RefreshReg$(_c, "MovieCard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"ZTXIF","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3d8ro","prop-types":"7wKI2"}],"ZTXIF":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"5lR7G","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"lxdJM","prop-types":"7wKI2"}],"5lR7G":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27470,9 +27470,9 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"3d8ro":[function(require,module,exports) {
+},{}],"lxdJM":[function(require,module,exports) {
 "use strict";
-var Refresh = require("ef57a934ca409575");
+var Refresh = require("582b3ef988f70545");
 function debounce(func, delay) {
     {
         let timeout = undefined;
@@ -27608,7 +27608,7 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"ef57a934ca409575":"jFqIb"}],"7wKI2":[function(require,module,exports) {
+},{"582b3ef988f70545":"1KhDs"}],"7wKI2":[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -28496,6 +28496,6 @@ $RefreshReg$(_c, "MovieView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"ZTXIF","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3d8ro"}],"lJZlQ":[function() {},{}]},["43g3P","fRKvV","d8Dch"], "d8Dch", "parcelRequireb589")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"5lR7G","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"lxdJM"}],"lJZlQ":[function() {},{}]},["guGFH","6Z55X","d8Dch"], "d8Dch", "parcelRequireb589")
 
 //# sourceMappingURL=index.b4b6dfad.js.map
