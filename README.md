@@ -5,7 +5,7 @@
     npm install --save react react-dom
 3.  Run application
     parcel src/index.html
-4.  Create components
+4.  Create components folder within src directory and create the following sub folders
     main-view, movie-view & movie-card
 5.  Add hooks
     useState, useEffect
