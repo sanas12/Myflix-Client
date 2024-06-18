@@ -1,10 +1,15 @@
-// src/components/profile-view/profile-view.jsx
 import React, { useState, useEffect } from "react";
 import { MovieCard } from "../movie-card/movie-card";
 import { Button, Col, Row, Form, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
-export const ProfileView = ({ user, movies, token, onLoggedOut }) => {
+export const ProfileView = ({
+  user,
+  movies,
+  token,
+  onLoggedOut,
+  onFavorite, // Use this prop to handle favorites
+}) => {
   const [username, setUsername] = useState(user.Username);
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState(user.Email);
@@ -126,8 +131,12 @@ export const ProfileView = ({ user, movies, token, onLoggedOut }) => {
             ) : (
               <Row>
                 {favoriteMovies.map((movie) => (
-                  <Col key={movie.id} md={6} lg={4} className="mb-4">
-                    <MovieCard movie={movie} />
+                  <Col key={movie._id} md={6} lg={4} className="mb-4">
+                    <MovieCard
+                      movie={movie}
+                      onFavorite={onFavorite}
+                      isFavorite={user.FavoriteMovies.includes(movie._id)}
+                    />
                   </Col>
                 ))}
               </Row>
