@@ -10,18 +10,6 @@ img {
   width: 100%;
 }
 
-.myflix {
-  color: #0000;
-  background-image: linear-gradient(to left, #553c9a, #b393d3);
-  background-clip: text;
-  font-size: 70px;
-  font-weight: 600;
-}
-
-a:hover {
-  background-color: none;
-}
-
 *, :after, :before {
   box-sizing: border-box;
 }
