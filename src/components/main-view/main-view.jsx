@@ -7,6 +7,7 @@ import { ProfileView } from "../profile-view/profile-view"; // Import ProfileVie
 import { Row, Col } from "react-bootstrap";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { NavigationBar } from "../navigation-bar/navigation-bar";
+import Form from "react-bootstrap/Form";
 
 export const MainView = () => {
   const [movies, setMovies] = useState([]);
@@ -14,6 +15,7 @@ export const MainView = () => {
     JSON.parse(localStorage.getItem("user")) || null
   );
   const [token, setToken] = useState(localStorage.getItem("token"));
+  const [searchQuery, setSearchQuery] = useState(""); // State for search query
 
   useEffect(() => {
     if (!token) return;
@@ -99,6 +101,10 @@ export const MainView = () => {
         );
       });
   };
+  // Filter the movies based on the search query
+  const filteredMovies = movies.filter((movie) =>
+    movie.Title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <BrowserRouter>
@@ -169,13 +175,19 @@ export const MainView = () => {
                 <Navigate to="/login" replace />
               ) : (
                 <>
-                  {movies.map((movie) => (
-                    <Col md={3} key={movie._id} className="mb-4">
-                      <MovieCard
-                        movie={movie}
-                        onFavorite={handleFavorite}
-                        isFavorite={user.FavoriteMovies.includes(movie._id)}
-                      />
+                  {/* Add a search input */}
+                  <Form>
+                    <Form.Control
+                      type="text"
+                      placeholder="Search for a movie"
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                    />
+                  </Form>
+                  {/* Display the filtered movies */}
+                  {filteredMovies.map((movie) => (
+                    <Col className="mb-4" key={movie.id} md={3}>
+                      <MovieCard movie={movie} />
                     </Col>
                   ))}
                 </>
