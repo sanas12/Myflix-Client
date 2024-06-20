@@ -101,6 +101,7 @@ export const MainView = () => {
         );
       });
   };
+
   // Filter the movies based on the search query
   const filteredMovies = movies.filter((movie) =>
     movie.Title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -186,8 +187,12 @@ export const MainView = () => {
                   </Form>
                   {/* Display the filtered movies */}
                   {filteredMovies.map((movie) => (
-                    <Col className="mb-4" key={movie.id} md={3}>
-                      <MovieCard movie={movie} />
+                    <Col className="mb-4" key={movie._id} md={3}>
+                      <MovieCard
+                        movie={movie}
+                        isFavorite={user.FavoriteMovies.includes(movie._id)}
+                        onFavorite={handleFavorite} // Pass the handleFavorite function
+                      />
                     </Col>
                   ))}
                 </>
