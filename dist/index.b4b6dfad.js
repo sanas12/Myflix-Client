@@ -41933,7 +41933,7 @@ const SignupView = ()=>{
             Email: email,
             Birthday: birthday
         };
-        fetch("https://movie-api-xkkk.onrender.com/users", {
+        fetch("https://myflix-app-s99e.onrender.com/users", {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
