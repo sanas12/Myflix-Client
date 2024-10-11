@@ -3,5 +3,5 @@ node_modules
 .parcel-cache
 dist
 node_modules
-.parcel-cache/data.mdb
+.parcel-cache/
 .git-attributes
