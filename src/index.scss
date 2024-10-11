@@ -1,4 +1,6 @@
-$primary: #a474de;
-$body-bg: Honeydew;
-
+$primary: #200ae3;
+body {
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+  background-attachment: fixed;
+}
 @import "~bootstrap/scss/bootstrap.scss";

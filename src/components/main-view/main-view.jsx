@@ -4,10 +4,11 @@ import { MovieView } from "../movie-view/movie-view";
 import { LoginView } from "../login-view/login-view";
 import { SignupView } from "../signup-view/signup-view";
 import { ProfileView } from "../profile-view/profile-view"; // Import ProfileView
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { NavigationBar } from "../navigation-bar/navigation-bar";
 import Form from "react-bootstrap/Form";
+import "./main-view.scss";
 
 export const MainView = () => {
   const [movies, setMovies] = useState([]);
@@ -101,6 +102,7 @@ export const MainView = () => {
         );
       });
   };
+
   // Filter the movies based on the search query
   const filteredMovies = movies.filter((movie) =>
     movie.Title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -108,94 +110,99 @@ export const MainView = () => {
 
   return (
     <BrowserRouter>
-      <NavigationBar user={user} onLoggedOut={handleLogout} />
-      <Row className="justify-content-md-center">
-        <Routes>
-          <Route
-            path="/signup"
-            element={
-              !user ? (
-                <Col md={5}>
-                  <SignupView />
-                </Col>
-              ) : (
-                <Navigate to="/" />
-              )
-            }
-          />
-          <Route
-            path="/login"
-            element={
-              !user ? (
-                <Col md={5}>
-                  <LoginView onLoggedIn={handleLogin} />
-                </Col>
-              ) : (
-                <Navigate to="/" />
-              )
-            }
-          />
-          <Route
-            path="/profile"
-            element={
-              !user ? (
-                <Navigate to="/login" replace />
-              ) : (
-                <ProfileView
-                  user={user}
-                  movies={movies}
-                  token={token}
-                  onLoggedOut={handleLogout}
-                  onFavorite={handleFavorite}
-                />
-              )
-            }
-          />
-          <Route
-            path="/movies/:movieId"
-            element={
-              !user ? (
-                <Navigate to="/login" replace />
-              ) : (
-                <Col md={8}>
-                  <MovieView
-                    movies={movies}
+      <Container>
+        <NavigationBar
+          user={user}
+          onLoggedOut={handleLogout}
+          onSearch={setSearchQuery} // Set searchQuery state directly
+        />
+        <Row className="justify-content-md-center">
+          <Routes>
+            <Route
+              path="/signup"
+              element={
+                !user ? (
+                  <Col md={5}>
+                    <SignupView />
+                  </Col>
+                ) : (
+                  <Navigate to="/" />
+                )
+              }
+            />
+            <Route
+              path="/login"
+              element={
+                !user ? (
+                  <Col md={5}>
+                    <LoginView onLoggedIn={handleLogin} />
+                  </Col>
+                ) : (
+                  <Navigate to="/" />
+                )
+              }
+            />
+            <Route
+              path="/profile"
+              element={
+                !user ? (
+                  <Navigate to="/login" replace />
+                ) : (
+                  <ProfileView
                     user={user}
+                    movies={movies}
                     token={token}
+                    onLoggedOut={handleLogout}
                     onFavorite={handleFavorite}
                   />
-                </Col>
-              )
-            }
-          />
-          <Route
-            path="/"
-            element={
-              !user ? (
-                <Navigate to="/login" replace />
-              ) : (
-                <>
-                  {/* Add a search input */}
-                  <Form>
-                    <Form.Control
-                      type="text"
-                      placeholder="Search for a movie"
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
+                )
+              }
+            />
+            <Route
+              path="/movies/:movieId"
+              element={
+                !user ? (
+                  <Navigate to="/login" replace />
+                ) : (
+                  <Col md={8}>
+                    <MovieView
+                      movies={movies}
+                      user={user}
+                      token={token}
+                      onFavorite={handleFavorite}
                     />
-                  </Form>
-                  {/* Display the filtered movies */}
-                  {filteredMovies.map((movie) => (
-                    <Col className="mb-4" key={movie.id} md={3}>
-                      <MovieCard movie={movie} />
-                    </Col>
-                  ))}
-                </>
-              )
-            }
-          />
-        </Routes>
-      </Row>
+                  </Col>
+                )
+              }
+            />
+            <Route
+              path="/"
+              element={
+                !user ? (
+                  <Navigate to="/login" replace />
+                ) : (
+                  <>
+                    {/* Display the filtered movies */}
+                    {filteredMovies.length > 0 ? (
+                      filteredMovies.map((movie) => (
+                        <Col className="mb-4" key={movie._id} md={3}>
+                          <MovieCard
+                            movie={movie}
+                            isFavorite={user.FavoriteMovies.includes(movie._id)}
+                            onFavorite={handleFavorite} // Pass the handleFavorite function
+                          />
+                        </Col>
+                      ))
+                    ) : (
+                      <div>No movies found.</div>
+                    )}
+                  </>
+                )
+              }
+            />
+          </Routes>
+        </Row>
+      </Container>
     </BrowserRouter>
   );
 };
