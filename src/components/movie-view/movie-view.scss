@@ -1,11 +1,58 @@
-.back-button {
-  padding: 4px 12px 4px 12px;
-  color: burlywood;
-  background-color: brown;
-  border: none;
-  border-radius: 4px;
+.movie-view {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 60px 0;
+  min-height: 100vh;
+
+  .movie-poster {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .movie-details {
+    padding: 30px;
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #ffffff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+
+    strong {
+      color: #ffffff;
+      font-weight: bold;
+    }
+  }
+
+  .back-button {
+    background-color: #ffd700;
+    color: #1a1a1a;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #e2b400;
+    }
+  }
 }
 
-img {
-  width: 100%;
+@media (min-width: 992px) {
+  .movie-view {
+    .row {
+      display: flex;
+      align-items: center;
+    }
+  }
 }
