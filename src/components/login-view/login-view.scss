@@ -7,12 +7,14 @@ $text-dark: #1a1a1a;
 $input-bg: #ffffff;
 $input-border: #cccccc;
 
+// Base styling for the login page
 .login-view {
   background-color: $primary-color;
   display: flex;
-  justify-content: center; // horizontally center
-  align-items: center; // vertically center
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  padding: 50px;
 }
 
 .login-background {
@@ -21,18 +23,20 @@ $input-border: #cccccc;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
-  min-width: 200vh;
+  min-width: 100vw;
 }
 
 .login-card {
   background-color: rgba($secondary-color, 0.95);
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  padding: 2.5rem;
+  padding: 1.5rem;
+  max-width: 400px;
+  width: 100%;
 
   &-header {
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
   }
 
   &-body {
@@ -46,7 +50,7 @@ $input-border: #cccccc;
 
 .login-title {
   color: $accent-color;
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
@@ -54,7 +58,7 @@ $input-border: #cccccc;
 
 .login-subtitle {
   color: $text-dark;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .login-input {
@@ -78,7 +82,6 @@ $input-border: #cccccc;
 }
 
 .login-button {
-  display: block;
   width: 100%;
   max-width: 220px;
   margin: 0 auto;
@@ -114,58 +117,119 @@ $input-border: #cccccc;
   }
 }
 
-@media (max-width: 479px) {
-  .login-button {
+// Responsive Design - Mobile First
+
+// For screens smaller than 576px (Mobile devices)
+@media (max-width: 575.98px) {
+  .login-view {
+    padding: 20px;
+  }
+
+  .login-card {
+    padding: 1rem;
     max-width: 100%;
-    font-size: 14px;
-    padding: 0.6rem 1.2rem;
+  }
+
+  .login-title {
+    font-size: 1.8rem;
+  }
+
+  .login-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .login-button {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
   }
 }
 
-@media (min-width: 480px) and (max-width: 767px) {
+// For screens between 576px and 768px (Small tablets)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .login-view {
+    padding: 30px;
+  }
+
   .login-card {
-    padding: 1.5rem;
+    padding: 1.2rem;
+    max-width: 90%;
   }
 
   .login-title {
     font-size: 2rem;
   }
 
+  .login-subtitle {
+    font-size: 1rem;
+  }
+
   .login-button {
-    max-width: 180px;
-    font-size: 15px;
-    padding: 0.65rem 1.3rem;
+    font-size: 1.05rem;
+    padding: 0.8rem 1.3rem;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+// For screens between 768px and 992px (Tablets & small desktops)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .login-view {
+    padding: 40px;
+  }
+
   .login-card {
-    padding: 2rem;
+    padding: 1.5rem;
+    max-width: 80%;
+  }
+
+  .login-title {
+    font-size: 2.2rem;
+  }
+
+  .login-subtitle {
+    font-size: 1.05rem;
   }
 
   .login-button {
-    max-width: 190px;
-    font-size: 16px;
-    padding: 0.7rem 1.4rem;
+    font-size: 1.1rem;
+    padding: 0.85rem 1.5rem;
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+// For screens between 992px and 1200px (Larger desktops)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .login-view {
+    padding: 50px;
+  }
+
   .login-card {
-    padding: 2.5rem;
+    max-width: 80%;
+  }
+
+  .login-title {
+    font-size: 2.4rem;
   }
 
   .login-button {
-    max-width: 200px;
-    font-size: 17px;
-    padding: 0.75rem 1.5rem;
+    font-size: 1.15rem;
+    padding: 0.9rem 1.7rem;
   }
 }
 
+// For screens larger than 1200px (Extra large desktops)
 @media (min-width: 1200px) {
+  .login-view {
+    padding: 50px;
+  }
+
+  .login-card {
+    max-width: 100%;
+  }
+
+  .login-title {
+    font-size: 2.8rem;
+  }
+
   .login-button {
-    max-width: 220px;
-    font-size: 18px;
-    padding: 0.8rem 1.6rem;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
   }
 }
