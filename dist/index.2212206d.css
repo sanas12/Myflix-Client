@@ -178,11 +178,9 @@
 }
 
 .login-view {
-  background-color: #1a1a1a;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 50px;
   display: flex;
 }
 
@@ -287,10 +285,6 @@
 }
 
 @media (width <= 575.98px) {
-  .login-view {
-    padding: 20px;
-  }
-
   .login-card {
     max-width: 100%;
     padding: 1rem;
@@ -311,10 +305,6 @@
 }
 
 @media (width >= 576px) and (width <= 767.98px) {
-  .login-view {
-    padding: 30px;
-  }
-
   .login-card {
     max-width: 90%;
     padding: 1.2rem;
@@ -335,10 +325,6 @@
 }
 
 @media (width >= 768px) and (width <= 991.98px) {
-  .login-view {
-    padding: 40px;
-  }
-
   .login-card {
     max-width: 80%;
     padding: 1.5rem;
@@ -359,10 +345,6 @@
 }
 
 @media (width >= 992px) and (width <= 1199.98px) {
-  .login-view {
-    padding: 50px;
-  }
-
   .login-card {
     max-width: 80%;
   }
@@ -378,10 +360,6 @@
 }
 
 @media (width >= 1200px) {
-  .login-view {
-    padding: 50px;
-  }
-
   .login-card {
     max-width: 100%;
   }

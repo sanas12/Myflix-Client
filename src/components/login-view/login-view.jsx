@@ -41,7 +41,7 @@ export const LoginView = ({ onLoggedIn }) => {
       });
   };
   return (
-    <Container fluid className="login-view p-1">
+    <Container fluid className="login-view p-0">
       <div className="login-background vh-100">
         <Row className="justify-content-center align-items-center h-100  m-0">
           <Col xs={12} sm={10} md={8} lg={6} xl={4}>

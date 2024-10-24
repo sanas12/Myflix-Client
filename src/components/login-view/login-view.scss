@@ -9,12 +9,10 @@ $input-border: #cccccc;
 
 // Base styling for the login page
 .login-view {
-  background-color: $primary-color;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 50px;
 }
 
 .login-background {
@@ -121,10 +119,6 @@ $input-border: #cccccc;
 
 // For screens smaller than 576px (Mobile devices)
 @media (max-width: 575.98px) {
-  .login-view {
-    padding: 20px;
-  }
-
   .login-card {
     padding: 1rem;
     max-width: 100%;
@@ -146,10 +140,6 @@ $input-border: #cccccc;
 
 // For screens between 576px and 768px (Small tablets)
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .login-view {
-    padding: 30px;
-  }
-
   .login-card {
     padding: 1.2rem;
     max-width: 90%;
@@ -171,10 +161,6 @@ $input-border: #cccccc;
 
 // For screens between 768px and 992px (Tablets & small desktops)
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .login-view {
-    padding: 40px;
-  }
-
   .login-card {
     padding: 1.5rem;
     max-width: 80%;
@@ -196,10 +182,6 @@ $input-border: #cccccc;
 
 // For screens between 992px and 1200px (Larger desktops)
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  .login-view {
-    padding: 50px;
-  }
-
   .login-card {
     max-width: 80%;
   }
@@ -216,10 +198,6 @@ $input-border: #cccccc;
 
 // For screens larger than 1200px (Extra large desktops)
 @media (min-width: 1200px) {
-  .login-view {
-    padding: 50px;
-  }
-
   .login-card {
     max-width: 100%;
   }

@@ -43311,7 +43311,7 @@ const LoginView = ({ onLoggedIn })=>{
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
         fluid: true,
-        className: "login-view p-1",
+        className: "login-view p-0",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "login-background vh-100",
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
